@@ -1,0 +1,19 @@
+1) Need to generate new key pair that will own the LADA token **SECURITY PLS**
+
+spl-token create-token
+
+2) Will get account from this command ^ i.e. XXXXXXXXX1
+
+spl-token create-account
+
+spl-token mint XXXXXXXXX1 1000000000 (1 billion mcap)
+
+3) Disable future minting
+
+spl-token authorize XXXXXXXXX1 mint --disable
+
+4) Give tokens to treasury, game inflation and team / investors
+
+spl-token transfer --fund-recipient XXXXXXXXX1 250000000 TREASURY_ADDRESS
+spl-token transfer --fund-recipient XXXXXXXXX1 250000000 TEAM_ADDRESS
+spl-token transfer --fund-recipient XXXXXXXXX1 500000000 LC_PROGRAM_ADDRESS

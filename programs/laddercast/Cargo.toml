@@ -1,0 +1,31 @@
+[package]
+name = "laddercast"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "laddercast"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+debug = []
+default = []
+
+[dependencies]
+anchor-lang = { version = "0.21.0", features = ["init-if-needed"] }
+strum = { version = "0.23.0", features = ["derive"] }
+num-traits = "0.2.14"
+anchor-spl = "0.21.0"
+spl-token = { version = "3.2.0", features = ["no-entrypoint"] }
+solana-maths = { git = "https://github.com/mccjul/solana-maths.git", rev = "f2d94d9" }
+mpl-token-metadata = { version = "1.2.4", features = ["no-entrypoint"] }
+
+[dev-dependencies]
+rand = "0.8.4"
+lazy_static = "1.4.0"
+

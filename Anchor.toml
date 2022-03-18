@@ -1,0 +1,13 @@
+[programs.devnet]
+laddercast = "LCThBz55Ma7hcueUQA3iiofBhvidQHfNLxxwfLsycxb"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.test.ts"
+dep = "bash ./migrations/deploy.sh"
